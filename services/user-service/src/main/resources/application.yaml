@@ -1,3 +1,9 @@
 spring:
   application:
     name: user-service
+
+jwt:
+  # Generate secure secret: openssl rand -base64 64
+  secret: ${JWT_SECRET:dGl0YW5iYW5rLXNlY3JldC1rZXktZm9yLWRldmVsb3BtZW50LW9ubHktY2hhbmdlLWluLXByb2R1Y3Rpb24tYmVjYXVzZS10aGlzLWlzLWp1c3QtYS1kZW1v}
+  access-token-expiration: 900      # 15 minutes (in seconds)
+  refresh-token-expiration: 604800  # 7 days (in seconds)

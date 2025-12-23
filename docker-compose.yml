@@ -1,0 +1,9 @@
+services:
+  account-service:
+    build: ./services/account-service
+    ports:
+      - "8082:8082"
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "8081:8081"
